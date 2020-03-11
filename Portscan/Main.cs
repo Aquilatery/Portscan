@@ -96,6 +96,7 @@ namespace Portscan
             PORT2T.Enabled = State;
             TCP.Enabled = State;
             UDP.Enabled = State;
+            FST.Enabled = State;
             if (State)
             {
                 SCAN.Text = "BAŞLAT";
@@ -143,7 +144,7 @@ namespace Portscan
                 return ProtocolType.Udp;
         }
 
-        private void SCN(int P, string IP)
+        private void SCN1(int P, string IP)
         {
             if (!Start)
             {
@@ -152,14 +153,36 @@ namespace Portscan
                 {
                     Socket.Connect(IP, P);
                     RO.Items.Add(P);
-                    Socket.Dispose();
                     AOPC.Text = RO.Items.Count.ToString();
+                    Socket.Dispose();
                 }
                 catch
                 {
                     RC.Items.Add(P);
-                    Socket.Dispose();
                     KOPC.Text = RC.Items.Count.ToString();
+                    Socket.Dispose();
+                }
+                PRT();
+            }
+        }
+
+        private async void SCN2(int P, string IP)
+        {
+            if (!Start)
+            {
+                Socket Socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, GTU());
+                try
+                {
+                    await Socket.ConnectAsync(IP, P);
+                    RO.Items.Add(P);
+                    AOPC.Text = RO.Items.Count.ToString();
+                    Socket.Dispose();
+                }
+                catch
+                {
+                    RC.Items.Add(P);
+                    KOPC.Text = RC.Items.Count.ToString();
+                    Socket.Dispose();
                 }
                 PRT();
             }
@@ -171,21 +194,22 @@ namespace Portscan
             if (string.IsNullOrEmpty(PORT2T.Text))
                 E = Int32.Parse(PORT1T.Text);
             else
-                E = Int32.Parse(PORT2T.Text);
-            for (int C = Int32.Parse(PORT1T.Text); C <= E; C++)
+                E = Int32.Parse(PORT2T.Text) ;
+            Parallel.For(Int32.Parse(PORT1T.Text), ++E, C =>
             {
-                if (Start)
-                    break;
-                else
+                if (!Start)
                 {
                     int P = C;
                     Task TASK = new Task(delegate ()
                     {
-                        SCN(P, DOMAIN.Text);
+                        if (FST.Checked)
+                            SCN2(P, DOMAIN.Text);
+                        else
+                            SCN1(P, DOMAIN.Text);
                     });
                     TASK.Start();
                 }
-            }
+            });
             Task.WaitAll();
         }
     }

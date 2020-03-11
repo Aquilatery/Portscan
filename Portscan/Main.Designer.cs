@@ -49,6 +49,7 @@
             this.RESULT = new System.Windows.Forms.Label();
             this.Times = new System.Windows.Forms.Timer(this.components);
             this.TIMER = new System.Windows.Forms.Label();
+            this.FST = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // IP
@@ -112,7 +113,6 @@
             this.RO.Name = "RO";
             this.RO.ScrollAlwaysVisible = true;
             this.RO.Size = new System.Drawing.Size(170, 82);
-            this.RO.Sorted = true;
             this.RO.TabIndex = 4;
             // 
             // PORT1L
@@ -178,7 +178,6 @@
             this.RC.Name = "RC";
             this.RC.ScrollAlwaysVisible = true;
             this.RC.Size = new System.Drawing.Size(170, 82);
-            this.RC.Sorted = true;
             this.RC.TabIndex = 10;
             // 
             // Scanner
@@ -257,11 +256,25 @@
             this.TIMER.Text = "Geçen Süre: 0s";
             this.TIMER.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // FST
+            // 
+            this.FST.AutoSize = true;
+            this.FST.Checked = true;
+            this.FST.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.FST.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FST.Location = new System.Drawing.Point(15, 60);
+            this.FST.Name = "FST";
+            this.FST.Size = new System.Drawing.Size(76, 17);
+            this.FST.TabIndex = 18;
+            this.FST.Text = "Süper Hızlı";
+            this.FST.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 245);
+            this.Controls.Add(this.FST);
             this.Controls.Add(this.TIMER);
             this.Controls.Add(this.RESULT);
             this.Controls.Add(this.KOPC);
@@ -312,5 +325,6 @@
         private System.Windows.Forms.Label RESULT;
         private System.Windows.Forms.Timer Times;
         private System.Windows.Forms.Label TIMER;
+        private System.Windows.Forms.CheckBox FST;
     }
 }
