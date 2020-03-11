@@ -9,6 +9,7 @@ namespace Portscan
     {
         bool Start = true;
         int EIS = 0;
+        double Time = 0;
 
         public Main()
         {
@@ -79,6 +80,12 @@ namespace Portscan
                 FIX(true);
         }
 
+        private void Times_Tick(object sender, EventArgs e)
+        {
+            Time += 0.1;
+            TIMER.Text = "Geçen Süre: " + Math.Round(Time, 1) + "s";
+        }
+
         private void FIX(bool State)
         {
             Start = State;
@@ -91,10 +98,12 @@ namespace Portscan
             {
                 SCAN.Text = "BAŞLAT";
                 Scanner.CancelAsync();
+                Times.Stop();
             }
             else
             {
                 SCAN.Text = "DURDUR";
+                Times.Start();
                 if (RO.Items.Count > 0)
                     RO.Items.Clear();
                 if (RC.Items.Count > 0)
@@ -102,6 +111,7 @@ namespace Portscan
                 RESULT.Text = "";
                 AOPC.Text = "0";
                 KOPC.Text = "0";
+                Time = 0.0;
                 if (string.IsNullOrEmpty(PORT2T.Text))
                     EIS = 1;
                 else

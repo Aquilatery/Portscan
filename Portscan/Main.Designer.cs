@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.IP = new System.Windows.Forms.Label();
             this.DOMAIN = new System.Windows.Forms.TextBox();
@@ -46,6 +47,8 @@
             this.AOPC = new System.Windows.Forms.Label();
             this.KOPC = new System.Windows.Forms.Label();
             this.RESULT = new System.Windows.Forms.Label();
+            this.Times = new System.Windows.Forms.Timer(this.components);
+            this.TIMER = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // IP
@@ -237,11 +240,27 @@
             this.RESULT.TabIndex = 15;
             this.RESULT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // Times
+            // 
+            this.Times.Tick += new System.EventHandler(this.Times_Tick);
+            // 
+            // TIMER
+            // 
+            this.TIMER.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.TIMER.Location = new System.Drawing.Point(15, 61);
+            this.TIMER.Name = "TIMER";
+            this.TIMER.Size = new System.Drawing.Size(363, 13);
+            this.TIMER.TabIndex = 16;
+            this.TIMER.Text = "Geçen Süre: 0s";
+            this.TIMER.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 245);
+            this.Controls.Add(this.TIMER);
             this.Controls.Add(this.RESULT);
             this.Controls.Add(this.KOPC);
             this.Controls.Add(this.AOPC);
@@ -263,7 +282,7 @@
             this.MaximizeBox = false;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Portscan v1.0";
+            this.Text = "Portscan v1.1";
             this.Load += new System.EventHandler(this.Main_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -289,5 +308,7 @@
         private System.Windows.Forms.Label AOPC;
         private System.Windows.Forms.Label KOPC;
         private System.Windows.Forms.Label RESULT;
+        private System.Windows.Forms.Timer Times;
+        private System.Windows.Forms.Label TIMER;
     }
 }
