@@ -64,7 +64,7 @@
             // DOMAIN
             // 
             this.DOMAIN.Location = new System.Drawing.Point(147, 8);
-            this.DOMAIN.MaxLength = 250;
+            this.DOMAIN.MaxLength = 50;
             this.DOMAIN.Name = "DOMAIN";
             this.DOMAIN.Size = new System.Drawing.Size(123, 20);
             this.DOMAIN.TabIndex = 1;
@@ -112,6 +112,7 @@
             this.RO.Name = "RO";
             this.RO.ScrollAlwaysVisible = true;
             this.RO.Size = new System.Drawing.Size(170, 82);
+            this.RO.Sorted = true;
             this.RO.TabIndex = 4;
             // 
             // PORT1L
@@ -177,6 +178,7 @@
             this.RC.Name = "RC";
             this.RC.ScrollAlwaysVisible = true;
             this.RC.Size = new System.Drawing.Size(170, 82);
+            this.RC.Sorted = true;
             this.RC.TabIndex = 10;
             // 
             // Scanner

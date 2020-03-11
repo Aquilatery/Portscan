@@ -59,6 +59,8 @@ namespace Portscan
             {
                 if (string.IsNullOrEmpty(DOMAIN.Text) || string.IsNullOrWhiteSpace(DOMAIN.Text))
                     MessageBox.Show("IP Adresi - Domain Boş!");
+                else if (DOMAIN.Text.StartsWith("http"))
+                    MessageBox.Show("Domain Adresi 'http' veya 'https' İle Başlamaz!");
                 else if (string.IsNullOrEmpty(PORT1T.Text))
                     MessageBox.Show("PORT 1 Boş!");
                 else if (Convert.ToInt32(PORT1T.Text) == 0 || Convert.ToInt32(PORT1T.Text) > 65535)
@@ -109,7 +111,8 @@ namespace Portscan
                 RESULT.Text = "";
                 AOPC.Text = "0";
                 KOPC.Text = "0";
-                Time = 0.0;
+                Time = 0;
+                TIMER.Text = "Geçen Süre: 0s";
                 if (string.IsNullOrEmpty(PORT2T.Text))
                     EIS = 1;
                 else
@@ -151,16 +154,12 @@ namespace Portscan
                     RO.Items.Add(P);
                     Socket.Dispose();
                     AOPC.Text = RO.Items.Count.ToString();
-                    if (RO.Items.Count > 0)
-                        RO.SelectedIndex = RO.Items.Count - 1;
                 }
                 catch
                 {
                     RC.Items.Add(P);
                     Socket.Dispose();
                     KOPC.Text = RC.Items.Count.ToString();
-                    if (RC.Items.Count > 0)
-                        RC.SelectedIndex = RC.Items.Count - 1;
                 }
                 PRT();
             }
