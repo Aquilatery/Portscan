@@ -27,8 +27,8 @@ namespace Portscan
             {
                 UDP.Visible = false;
                 TCP.Visible = false;
-                DOMAIN.Size = new System.Drawing.Size(231, 20);
-                MessageBox.Show("UDP Desteklenmediğinden Seçim Devre Dışı Bırakıldı!", "TCP/UDP Bilgilendirme", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                DOMAIN.Size = new System.Drawing.Size(219, 20);
+                MessageBox.Show("Selection Disabled Because UDP Is Not Supported!", "TCP/UDP Information", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
@@ -61,49 +61,33 @@ namespace Portscan
                 if (Start)
                 {
                     if (string.IsNullOrEmpty(DOMAIN.Text) || string.IsNullOrWhiteSpace(DOMAIN.Text))
-                        MessageBox.Show("IP Adresi - Domain Boş!");
+                        MessageBox.Show("IP Address - Domain is Empty!");
                     else if (DOMAIN.Text.StartsWith("http"))
-                        MessageBox.Show("Domain Adresi 'http' veya 'https' İle Başlamaz!");
+                        MessageBox.Show("Domain Address Does Not Start With 'http' or 'https'!");
                     else if (string.IsNullOrEmpty(PORT1T.Text))
-                        MessageBox.Show("PORT 1 Boş!");
+                        MessageBox.Show("PORT 1 is Empty!");
                     else if (Convert.ToInt32(PORT1T.Text) == 0 || Convert.ToInt32(PORT1T.Text) > 65535)
-                        MessageBox.Show("PORT 1 0'dan Büyük, 65535'ten Küçük Olmalı!");
+                        MessageBox.Show("PORT 1 Must Be Greater Than 0, Less Than 65535!");
                     else if (!string.IsNullOrEmpty(PORT2T.Text) && Convert.ToInt32(PORT1T.Text) == 0 || Convert.ToInt32(PORT1T.Text) > 65535)
-                        MessageBox.Show("PORT 2 0'dan Büyük, 65535'ten Küçük Olmalı!");
+                        MessageBox.Show("PORT 2 Must Be Greater Than 0 and Less Than 65535!");
                     else if (!string.IsNullOrEmpty(PORT2T.Text) && (PORT1T.Text == PORT2T.Text || Convert.ToInt32(PORT1T.Text) == Convert.ToInt32(PORT2T.Text)))
-                        MessageBox.Show("PORT 1, PORT 2 İle Aynı Olamaz!");
+                        MessageBox.Show("PORT 1 Cannot Be The Same As PORT 2!");
                     else if (!string.IsNullOrEmpty(PORT2T.Text) && Convert.ToInt32(PORT1T.Text) > Convert.ToInt32(PORT2T.Text))
-                        MessageBox.Show("PORT 1, PORT 2'den Küçük Olmalı!");
+                        MessageBox.Show("PORT 1 Must Be Less Than PORT 2!");
                     else if (PORT1T.Text.StartsWith("0"))
-                        MessageBox.Show("PORT 1 Değeri 0 İle Başlayamaz!");
+                        MessageBox.Show("PORT 1 Value Cannot Begin With 0!");
                     else if (PORT2T.Text.StartsWith("0"))
-                        MessageBox.Show("PORT 2 Değeri 0 İle Başlayamaz!");
+                        MessageBox.Show("PORT 2 Value Cannot Begin With 0!");
                     else
                         FIX(false);
                 }
                 else
                     FIX(true);
             }
-            catch (Exception Hata)
+            catch (Exception Error)
             {
-                MessageBox.Show(Hata.Message + "\n\n" + Hata.StackTrace, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Error.Message + "\n\n" + Error.StackTrace, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
-            }
-        }
-
-        private void CLS_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (ROL.Items.Count > 1)
-                    ROL.Items.Clear();
-                if (RCL.Items.Count > 1)
-                    RCL.Items.Clear();
-            }
-            catch (Exception Hata)
-            {
-                MessageBox.Show(Hata.Message + "\n\n" + Hata.StackTrace, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //Application.Exit();
             }
         }
 
@@ -112,11 +96,12 @@ namespace Portscan
             try
             {
                 Time += 0.1;
-                TIMER.Text = "Geçen Süre: " + Math.Round(Time, 1) + "s";
+                TIMER.Text = "The Passing Time: " + Math.Round(Time, 1) + "s";
+                PRT();
             }
-            catch (Exception Hata)
+            catch (Exception Error)
             {
-                MessageBox.Show(Hata.Message + "\n\n" + Hata.StackTrace, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Error.Message + "\n\n" + Error.StackTrace, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
         }
@@ -134,19 +119,22 @@ namespace Portscan
                 FST.Enabled = State;
                 if (State)
                 {
-                    SCAN.Text = "BAŞLAT";
+                    SCAN.Text = "START";
                     Scanner.CancelAsync();
                     Times.Stop();
-                    CLS.Enabled = true;
                 }
                 else
                 {
-                    SCAN.Text = "DURDUR";
+                    if (ROL.Items.Count > 1)
+                        ROL.Items.Clear();
+                    if (RCL.Items.Count > 1)
+                        RCL.Items.Clear();
+                    SCAN.Text = "STOP";
                     RESULT.Text = "";
                     AOPC.Text = "0";
                     KOPC.Text = "0";
                     Time = 0;
-                    TIMER.Text = "Geçen Süre: 0s";
+                    TIMER.Text = "The Passing Time: 0s";
                     if (string.IsNullOrEmpty(PORT2T.Text))
                         EIS = 1;
                     else
@@ -155,9 +143,9 @@ namespace Portscan
                     Scanner.RunWorkerAsync();
                 }
             }
-            catch (Exception Hata)
+            catch (Exception Error)
             {
-                MessageBox.Show(Hata.Message + "\n\n" + Hata.StackTrace, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Error.Message + "\n\n" + Error.StackTrace, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
         }
@@ -170,16 +158,16 @@ namespace Portscan
                 if (!string.IsNullOrEmpty(PORT2T.Text))
                     R = EIS - (ROL.Items.Count + RCL.Items.Count) + 1;
                 if (R > 0)
-                    RESULT.Text = "KALAN: " + R;
+                    RESULT.Text = "REMAINING: " + R;
                 else
                 {
                     RESULT.Text = "";
                     FIX(true);
                 }
             }
-            catch (Exception Hata)
+            catch (Exception Error)
             {
-                MessageBox.Show(Hata.Message + "\n\n" + Hata.StackTrace, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Error.Message + "\n\n" + Error.StackTrace, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
         }
@@ -262,9 +250,9 @@ namespace Portscan
                 });
                 Task.WaitAll();
             }
-            catch (Exception Hata)
+            catch (Exception Error)
             {
-                MessageBox.Show(Hata.Message + "\n\n" + Hata.StackTrace, "Hata", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(Error.Message + "\n\n" + Error.StackTrace, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Application.Exit();
             }
         }

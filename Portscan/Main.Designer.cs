@@ -50,7 +50,6 @@
             this.Times = new System.Windows.Forms.Timer(this.components);
             this.TIMER = new System.Windows.Forms.Label();
             this.FST = new System.Windows.Forms.CheckBox();
-            this.CLS = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // IP
@@ -59,24 +58,25 @@
             this.IP.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.IP.Location = new System.Drawing.Point(12, 9);
             this.IP.Name = "IP";
-            this.IP.Size = new System.Drawing.Size(129, 17);
+            this.IP.Size = new System.Drawing.Size(141, 17);
             this.IP.TabIndex = 0;
-            this.IP.Text = "IP Adresi - Domain:";
+            this.IP.Text = "IP Address - Domain:";
             // 
             // DOMAIN
             // 
-            this.DOMAIN.Location = new System.Drawing.Point(147, 8);
+            this.DOMAIN.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.DOMAIN.Location = new System.Drawing.Point(159, 8);
             this.DOMAIN.MaxLength = 50;
             this.DOMAIN.Name = "DOMAIN";
-            this.DOMAIN.Size = new System.Drawing.Size(123, 20);
+            this.DOMAIN.Size = new System.Drawing.Size(111, 20);
             this.DOMAIN.TabIndex = 1;
             this.DOMAIN.Text = "localhost";
             this.DOMAIN.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // TCP
             // 
-            this.TCP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.TCP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.TCP.AutoSize = true;
             this.TCP.CheckAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -93,8 +93,7 @@
             // 
             // UDP
             // 
-            this.UDP.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
+            this.UDP.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.UDP.AutoSize = true;
             this.UDP.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -167,9 +166,9 @@
             this.SCAN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SCAN.Location = new System.Drawing.Point(276, 35);
             this.SCAN.Name = "SCAN";
-            this.SCAN.Size = new System.Drawing.Size(63, 23);
+            this.SCAN.Size = new System.Drawing.Size(102, 23);
             this.SCAN.TabIndex = 9;
-            this.SCAN.Text = "BAŞLAT";
+            this.SCAN.Text = "START";
             this.SCAN.UseVisualStyleBackColor = true;
             this.SCAN.Click += new System.EventHandler(this.SCAN_Click);
             // 
@@ -198,7 +197,7 @@
             this.AOPL.Name = "AOPL";
             this.AOPL.Size = new System.Drawing.Size(173, 17);
             this.AOPL.TabIndex = 11;
-            this.AOPL.Text = "Açık Olan Port Listesi";
+            this.AOPL.Text = "Opened Port List";
             this.AOPL.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // KOPL
@@ -209,7 +208,7 @@
             this.KOPL.Name = "KOPL";
             this.KOPL.Size = new System.Drawing.Size(173, 17);
             this.KOPL.TabIndex = 12;
-            this.KOPL.Text = "Kapalı Olan Port Listesi";
+            this.KOPL.Text = "Closed Port List";
             this.KOPL.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             // 
             // AOPC
@@ -244,7 +243,6 @@
             this.RESULT.Name = "RESULT";
             this.RESULT.Size = new System.Drawing.Size(363, 54);
             this.RESULT.TabIndex = 15;
-            this.RESULT.Text = "ABCDEF";
             this.RESULT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Times
@@ -259,7 +257,7 @@
             this.TIMER.Name = "TIMER";
             this.TIMER.Size = new System.Drawing.Size(363, 13);
             this.TIMER.TabIndex = 16;
-            this.TIMER.Text = "Geçen Süre: 0s";
+            this.TIMER.Text = "The Passing Time: 0s";
             this.TIMER.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FST
@@ -270,30 +268,16 @@
             this.FST.Cursor = System.Windows.Forms.Cursors.Hand;
             this.FST.Location = new System.Drawing.Point(15, 60);
             this.FST.Name = "FST";
-            this.FST.Size = new System.Drawing.Size(76, 17);
+            this.FST.Size = new System.Drawing.Size(105, 17);
             this.FST.TabIndex = 18;
-            this.FST.Text = "Süper Hızlı";
+            this.FST.Text = "Super Fast Scan";
             this.FST.UseVisualStyleBackColor = true;
-            // 
-            // CLS
-            // 
-            this.CLS.AutoSize = true;
-            this.CLS.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.CLS.Enabled = false;
-            this.CLS.Location = new System.Drawing.Point(345, 35);
-            this.CLS.Name = "CLS";
-            this.CLS.Size = new System.Drawing.Size(33, 23);
-            this.CLS.TabIndex = 19;
-            this.CLS.Text = "SİL";
-            this.CLS.UseVisualStyleBackColor = true;
-            this.CLS.Click += new System.EventHandler(this.CLS_Click);
             // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 245);
-            this.Controls.Add(this.CLS);
             this.Controls.Add(this.FST);
             this.Controls.Add(this.TIMER);
             this.Controls.Add(this.RESULT);
@@ -346,6 +330,5 @@
         private System.Windows.Forms.Timer Times;
         private System.Windows.Forms.Label TIMER;
         private System.Windows.Forms.CheckBox FST;
-        private System.Windows.Forms.Button CLS;
     }
 }
