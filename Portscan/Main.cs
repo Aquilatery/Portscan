@@ -104,10 +104,8 @@ namespace Portscan
             {
                 SCAN.Text = "DURDUR";
                 Times.Start();
-                if (RO.Items.Count > 0)
-                    RO.Items.Clear();
-                if (RC.Items.Count > 0)
-                    RC.Items.Clear();
+                RO.Items.Clear();
+                RC.Items.Clear();
                 RESULT.Text = "";
                 AOPC.Text = "0";
                 KOPC.Text = "0";
@@ -122,10 +120,8 @@ namespace Portscan
 
         private void PRT()
         {
-            int R;
-            if (string.IsNullOrEmpty(PORT2T.Text))
-                R = EIS - (RO.Items.Count + RC.Items.Count);
-            else
+            int R = 0;
+            if (!string.IsNullOrEmpty(PORT2T.Text))
                 R = EIS - (RO.Items.Count + RC.Items.Count) + 1;
             if (R > 0)
                 RESULT.Text = "KALAN: " + R;
@@ -155,12 +151,16 @@ namespace Portscan
                     RO.Items.Add(P);
                     Socket.Dispose();
                     AOPC.Text = RO.Items.Count.ToString();
+                    if (RO.Items.Count > 0)
+                        RO.SelectedIndex = RO.Items.Count - 1;
                 }
                 catch
                 {
                     RC.Items.Add(P);
                     Socket.Dispose();
                     KOPC.Text = RC.Items.Count.ToString();
+                    if (RC.Items.Count > 0)
+                        RC.SelectedIndex = RC.Items.Count - 1;
                 }
                 PRT();
             }
