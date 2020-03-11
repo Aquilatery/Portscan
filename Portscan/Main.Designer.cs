@@ -34,13 +34,13 @@
             this.DOMAIN = new System.Windows.Forms.TextBox();
             this.TCP = new System.Windows.Forms.CheckBox();
             this.UDP = new System.Windows.Forms.CheckBox();
-            this.RO = new System.Windows.Forms.ListBox();
+            this.ROL = new System.Windows.Forms.ListBox();
             this.PORT1L = new System.Windows.Forms.Label();
             this.PORT1T = new System.Windows.Forms.MaskedTextBox();
             this.PORT2T = new System.Windows.Forms.MaskedTextBox();
             this.PORT2L = new System.Windows.Forms.Label();
             this.SCAN = new System.Windows.Forms.Button();
-            this.RC = new System.Windows.Forms.ListBox();
+            this.RCL = new System.Windows.Forms.ListBox();
             this.Scanner = new System.ComponentModel.BackgroundWorker();
             this.AOPL = new System.Windows.Forms.Label();
             this.KOPL = new System.Windows.Forms.Label();
@@ -50,6 +50,7 @@
             this.Times = new System.Windows.Forms.Timer(this.components);
             this.TIMER = new System.Windows.Forms.Label();
             this.FST = new System.Windows.Forms.CheckBox();
+            this.CLS = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // IP
@@ -105,15 +106,17 @@
             this.UDP.UseVisualStyleBackColor = true;
             this.UDP.CheckedChanged += new System.EventHandler(this.UDP_CheckedChanged);
             // 
-            // RO
+            // ROL
             // 
-            this.RO.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.RO.FormattingEnabled = true;
-            this.RO.Location = new System.Drawing.Point(15, 151);
-            this.RO.Name = "RO";
-            this.RO.ScrollAlwaysVisible = true;
-            this.RO.Size = new System.Drawing.Size(170, 82);
-            this.RO.TabIndex = 4;
+            this.ROL.AllowDrop = true;
+            this.ROL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.ROL.IntegralHeight = false;
+            this.ROL.Location = new System.Drawing.Point(15, 151);
+            this.ROL.Name = "ROL";
+            this.ROL.ScrollAlwaysVisible = true;
+            this.ROL.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.ROL.Size = new System.Drawing.Size(170, 82);
+            this.ROL.TabIndex = 4;
             // 
             // PORT1L
             // 
@@ -164,21 +167,23 @@
             this.SCAN.Cursor = System.Windows.Forms.Cursors.Hand;
             this.SCAN.Location = new System.Drawing.Point(276, 35);
             this.SCAN.Name = "SCAN";
-            this.SCAN.Size = new System.Drawing.Size(102, 23);
+            this.SCAN.Size = new System.Drawing.Size(63, 23);
             this.SCAN.TabIndex = 9;
             this.SCAN.Text = "BAŞLAT";
             this.SCAN.UseVisualStyleBackColor = true;
             this.SCAN.Click += new System.EventHandler(this.SCAN_Click);
             // 
-            // RC
+            // RCL
             // 
-            this.RC.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.RC.FormattingEnabled = true;
-            this.RC.Location = new System.Drawing.Point(208, 151);
-            this.RC.Name = "RC";
-            this.RC.ScrollAlwaysVisible = true;
-            this.RC.Size = new System.Drawing.Size(170, 82);
-            this.RC.TabIndex = 10;
+            this.RCL.AllowDrop = true;
+            this.RCL.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.RCL.IntegralHeight = false;
+            this.RCL.Location = new System.Drawing.Point(208, 151);
+            this.RCL.Name = "RCL";
+            this.RCL.ScrollAlwaysVisible = true;
+            this.RCL.SelectionMode = System.Windows.Forms.SelectionMode.None;
+            this.RCL.Size = new System.Drawing.Size(170, 82);
+            this.RCL.TabIndex = 10;
             // 
             // Scanner
             // 
@@ -239,6 +244,7 @@
             this.RESULT.Name = "RESULT";
             this.RESULT.Size = new System.Drawing.Size(363, 54);
             this.RESULT.TabIndex = 15;
+            this.RESULT.Text = "ABCDEF";
             this.RESULT.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Times
@@ -269,11 +275,25 @@
             this.FST.Text = "Süper Hızlı";
             this.FST.UseVisualStyleBackColor = true;
             // 
+            // CLS
+            // 
+            this.CLS.AutoSize = true;
+            this.CLS.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.CLS.Enabled = false;
+            this.CLS.Location = new System.Drawing.Point(345, 35);
+            this.CLS.Name = "CLS";
+            this.CLS.Size = new System.Drawing.Size(33, 23);
+            this.CLS.TabIndex = 19;
+            this.CLS.Text = "SİL";
+            this.CLS.UseVisualStyleBackColor = true;
+            this.CLS.Click += new System.EventHandler(this.CLS_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 245);
+            this.Controls.Add(this.CLS);
             this.Controls.Add(this.FST);
             this.Controls.Add(this.TIMER);
             this.Controls.Add(this.RESULT);
@@ -281,7 +301,7 @@
             this.Controls.Add(this.AOPC);
             this.Controls.Add(this.KOPL);
             this.Controls.Add(this.AOPL);
-            this.Controls.Add(this.RC);
+            this.Controls.Add(this.RCL);
             this.Controls.Add(this.SCAN);
             this.Controls.Add(this.PORT2T);
             this.Controls.Add(this.PORT2L);
@@ -289,7 +309,7 @@
             this.Controls.Add(this.PORT1L);
             this.Controls.Add(this.TCP);
             this.Controls.Add(this.UDP);
-            this.Controls.Add(this.RO);
+            this.Controls.Add(this.ROL);
             this.Controls.Add(this.DOMAIN);
             this.Controls.Add(this.IP);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
@@ -310,13 +330,13 @@
         private System.Windows.Forms.TextBox DOMAIN;
         private System.Windows.Forms.CheckBox TCP;
         private System.Windows.Forms.CheckBox UDP;
-        private System.Windows.Forms.ListBox RO;
+        private System.Windows.Forms.ListBox ROL;
         private System.Windows.Forms.Label PORT1L;
         private System.Windows.Forms.MaskedTextBox PORT1T;
         private System.Windows.Forms.MaskedTextBox PORT2T;
         private System.Windows.Forms.Label PORT2L;
         private System.Windows.Forms.Button SCAN;
-        private System.Windows.Forms.ListBox RC;
+        private System.Windows.Forms.ListBox RCL;
         private System.ComponentModel.BackgroundWorker Scanner;
         private System.Windows.Forms.Label AOPL;
         private System.Windows.Forms.Label KOPL;
@@ -326,5 +346,6 @@
         private System.Windows.Forms.Timer Times;
         private System.Windows.Forms.Label TIMER;
         private System.Windows.Forms.CheckBox FST;
+        private System.Windows.Forms.Button CLS;
     }
 }
