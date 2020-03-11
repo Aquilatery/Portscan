@@ -1,0 +1,9 @@
+E:\MyProject\Portscan\App\Portscan\Portscan\obj\Debug\Portscan.csprojAssemblyReference.cache
+E:\MyProject\Portscan\App\Portscan\Portscan\obj\Debug\Portscan.Properties.Resources.resources
+E:\MyProject\Portscan\App\Portscan\Portscan\obj\Debug\Portscan.csproj.GenerateResource.cache
+E:\MyProject\Portscan\App\Portscan\Portscan\bin\Debug\Portscan.exe.config
+E:\MyProject\Portscan\App\Portscan\Portscan\bin\Debug\Portscan.exe
+E:\MyProject\Portscan\App\Portscan\Portscan\bin\Debug\Portscan.pdb
+E:\MyProject\Portscan\App\Portscan\Portscan\obj\Debug\Portscan.exe
+E:\MyProject\Portscan\App\Portscan\Portscan\obj\Debug\Portscan.pdb
+E:\MyProject\Portscan\App\Portscan\Portscan\obj\Debug\Portscan.Main.resources
