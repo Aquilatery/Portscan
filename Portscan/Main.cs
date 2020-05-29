@@ -31,22 +31,22 @@ namespace Portscan
             }
             catch
             {
-                //UDP.Visible = false;
-                //TCP.Visible = false;
-                //DOMAIN.Size = new Size(250, 29);
-                //ForeverStatusBar INFO = new ForeverStatusBar
-                //{
-                //    Text = "TCP/UDP Information : Selection Disabled Because UDP Is Not Supported!",
-                //    TextColor = Color.FromArgb(136, 140, 155),
-                //    TimeColor = Color.DodgerBlue,
-                //    RectColor = Color.Crimson,
-                //    TimeFormat = "HH:mm:ss",
-                //    ShowTimeDate = true,
-                //};
-                //Controls.Add(INFO);
-                //INFO.Dock = DockStyle.Top;
-                //INFO.Visible = true;
-                //Height += INFO.Height;
+                UDP.Visible = false;
+                TCP.Visible = false;
+                DOMAIN.Size = new Size(250, 29);
+                ForeverStatusBar INFO = new ForeverStatusBar
+                {
+                    Text = "TCP/UDP Information : Selection Disabled Because UDP Is Not Supported!",
+                    TextColor = Color.FromArgb(136, 140, 155),
+                    TimeColor = Color.DodgerBlue,
+                    RectColor = Color.Crimson,
+                    TimeFormat = "HH:mm:ss",
+                    ShowTimeDate = true,
+                };
+                Controls.Add(INFO);
+                INFO.Dock = DockStyle.Top;
+                INFO.Visible = true;
+                Height += INFO.Height;
             }
         }
 
