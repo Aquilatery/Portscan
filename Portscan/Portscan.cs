@@ -14,7 +14,7 @@ namespace Portscan
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Control.CheckForIllegalCrossThreadCalls = false;
-            Application.Run(new Main());
+            Application.Run(new MAIN());
         }
     }
 }
