@@ -1,5 +1,2 @@
-.vs/Portscan/v16/.suo
-.vs/Portscan/v16/Server/sqlite3/db.lock
-.vs/Portscan/v16/Server/sqlite3/storage.ide
-.vs/Portscan/v16/Server/sqlite3/storage.ide-wal
-.vs/Portscan/v16/Server/sqlite3/storage.ide-shm
+.vs/
+packages/
