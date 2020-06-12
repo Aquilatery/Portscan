@@ -70,7 +70,7 @@
             this.hopeForm1.Name = "hopeForm1";
             this.hopeForm1.Size = new System.Drawing.Size(435, 40);
             this.hopeForm1.TabIndex = 0;
-            this.hopeForm1.Text = "Portscan v1.3";
+            this.hopeForm1.Text = "Portscan v1.4";
             this.hopeForm1.ThemeColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(35)))), ((int)(((byte)(49)))));
             // 
             // IP
@@ -422,7 +422,7 @@
             this.Name = "MAIN";
             this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Portscan v1.3";
+            this.Text = "Portscan v1.4";
             this.Load += new System.EventHandler(this.MAIN_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
