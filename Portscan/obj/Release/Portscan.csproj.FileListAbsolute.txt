@@ -12,3 +12,17 @@ E:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\Portscan.csproj.CopyComp
 E:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\Portscan.exe
 E:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\Portscan.pdb
 E:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\Portscan.csprojAssemblyReference.cache
+G:\MyProject\Portscan\App\Portscan\Portscan\bin\Release\Portscan.exe.config
+G:\MyProject\Portscan\App\Portscan\Portscan\bin\Release\Portscan.exe
+G:\MyProject\Portscan\App\Portscan\Portscan\bin\Release\Portscan.pdb
+G:\MyProject\Portscan\App\Portscan\Portscan\bin\Release\ReaLTaiizor.dll
+G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\Portscan.csprojAssemblyReference.cache
+G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\Portscan.g.resources
+G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\Portscan.LAST.resources
+G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\Portscan.MAIN.resources
+G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\Portscan.Properties.Resources.resources
+G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\Portscan.csproj.GenerateResource.cache
+G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\Portscan.csproj.CoreCompileInputs.cache
+G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\Portscan.csproj.CopyComplete
+G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\Portscan.exe
+G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\Portscan.pdb
