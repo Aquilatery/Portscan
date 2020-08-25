@@ -1,10 +1,11 @@
 ﻿using System;
-using ReaLTaiizor;
 using System.Drawing;
+using ReaLTaiizor.Utils;
 using System.Net.Sockets;
 using System.Windows.Forms;
 using System.ComponentModel;
 using System.Threading.Tasks;
+using ReaLTaiizor.Controls.StatusBar;
 
 namespace Portscan
 {
