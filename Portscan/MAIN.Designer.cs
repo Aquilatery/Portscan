@@ -30,26 +30,26 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MAIN));
-            hopeForm1 = new ReaLTaiizor.Forms.Form.Hope();
-            IP = new ReaLTaiizor.Controls.LabelEdit.LabelEdit();
-            DOMAIN = new ReaLTaiizor.Controls.TextBox.ForeverTextBox();
-            TCP = new ReaLTaiizor.Controls.CheckBox.HopeCheckBox();
-            UDP = new ReaLTaiizor.Controls.CheckBox.HopeCheckBox();
-            PORT1L = new ReaLTaiizor.Controls.LabelEdit.LabelEdit();
-            PORT2L = new ReaLTaiizor.Controls.LabelEdit.LabelEdit();
+            hopeForm1 = new ReaLTaiizor.Forms.HopeForm();
+            IP = new ReaLTaiizor.Controls.LabelEdit();
+            DOMAIN = new ReaLTaiizor.Controls.ForeverTextBox();
+            TCP = new ReaLTaiizor.Controls.HopeCheckBox();
+            UDP = new ReaLTaiizor.Controls.HopeCheckBox();
+            PORT1L = new ReaLTaiizor.Controls.LabelEdit();
+            PORT2L = new ReaLTaiizor.Controls.LabelEdit();
             PORT2T = new System.Windows.Forms.MaskedTextBox();
             PORT1T = new System.Windows.Forms.MaskedTextBox();
-            SCAN = new ReaLTaiizor.Controls.Button.HopeButton();
-            PTIME = new ReaLTaiizor.Controls.LabelEdit.LabelEdit();
+            SCAN = new ReaLTaiizor.Controls.HopeButton();
+            PTIME = new ReaLTaiizor.Controls.LabelEdit();
             Scanner = new System.ComponentModel.BackgroundWorker();
             Times = new System.Windows.Forms.Timer(components);
-            SFAST = new ReaLTaiizor.Controls.CheckBox.ForeverCheckBox();
-            RESULT = new ReaLTaiizor.Controls.LabelEdit.LabelEdit();
-            AOPC = new ReaLTaiizor.Controls.LabelEdit.LabelEdit();
-            AOPL = new ReaLTaiizor.Controls.LabelEdit.LabelEdit();
-            KOPC = new ReaLTaiizor.Controls.LabelEdit.LabelEdit();
-            KOPL = new ReaLTaiizor.Controls.LabelEdit.LabelEdit();
-            airSeparator1 = new ReaLTaiizor.Controls.Separator.AirSeparator();
+            SFAST = new ReaLTaiizor.Controls.ForeverCheckBox();
+            RESULT = new ReaLTaiizor.Controls.LabelEdit();
+            AOPC = new ReaLTaiizor.Controls.LabelEdit();
+            AOPL = new ReaLTaiizor.Controls.LabelEdit();
+            KOPC = new ReaLTaiizor.Controls.LabelEdit();
+            KOPL = new ReaLTaiizor.Controls.LabelEdit();
+            airSeparator1 = new ReaLTaiizor.Controls.AirSeparator();
             RCL = new System.Windows.Forms.ListBox();
             ROL = new System.Windows.Forms.ListBox();
             SuspendLayout();
@@ -272,11 +272,11 @@
             SFAST.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(136)))), ((int)(((byte)(140)))), ((int)(((byte)(155)))));
             SFAST.Location = new System.Drawing.Point(24, 117);
             SFAST.Name = "SFAST";
-            SFAST.Options = ReaLTaiizor.Controls.CheckBox.ForeverCheckBox._Options.Style1;
+            SFAST.Options = ReaLTaiizor.Controls.ForeverCheckBox._Options.Style1;
             SFAST.Size = new System.Drawing.Size(131, 22);
             SFAST.TabIndex = 21;
             SFAST.Text = "Super Fast Scan";
-            SFAST.CheckedChanged += new ReaLTaiizor.Controls.CheckBox.ForeverCheckBox.CheckedChangedEventHandler(SFAST_CheckedChanged);
+            SFAST.CheckedChanged += new ReaLTaiizor.Controls.ForeverCheckBox.CheckedChangedEventHandler(SFAST_CheckedChanged);
             // 
             // RESULT
             // 
@@ -431,26 +431,26 @@
 
         #endregion
 
-        private ReaLTaiizor.Forms.Form.Hope hopeForm1;
-        private ReaLTaiizor.Controls.LabelEdit.LabelEdit IP;
-        private ReaLTaiizor.Controls.TextBox.ForeverTextBox DOMAIN;
-        private ReaLTaiizor.Controls.CheckBox.HopeCheckBox TCP;
-        private ReaLTaiizor.Controls.CheckBox.HopeCheckBox UDP;
-        private ReaLTaiizor.Controls.LabelEdit.LabelEdit PORT1L;
-        private ReaLTaiizor.Controls.LabelEdit.LabelEdit PORT2L;
+        private ReaLTaiizor.Forms.HopeForm hopeForm1;
+        private ReaLTaiizor.Controls.LabelEdit IP;
+        private ReaLTaiizor.Controls.ForeverTextBox DOMAIN;
+        private ReaLTaiizor.Controls.HopeCheckBox TCP;
+        private ReaLTaiizor.Controls.HopeCheckBox UDP;
+        private ReaLTaiizor.Controls.LabelEdit PORT1L;
+        private ReaLTaiizor.Controls.LabelEdit PORT2L;
         private System.Windows.Forms.MaskedTextBox PORT2T;
         private System.Windows.Forms.MaskedTextBox PORT1T;
-        private ReaLTaiizor.Controls.Button.HopeButton SCAN;
-        private ReaLTaiizor.Controls.LabelEdit.LabelEdit PTIME;
+        private ReaLTaiizor.Controls.HopeButton SCAN;
+        private ReaLTaiizor.Controls.LabelEdit PTIME;
         private System.ComponentModel.BackgroundWorker Scanner;
         private System.Windows.Forms.Timer Times;
-        private ReaLTaiizor.Controls.CheckBox.ForeverCheckBox SFAST;
-        private ReaLTaiizor.Controls.LabelEdit.LabelEdit RESULT;
-        private ReaLTaiizor.Controls.LabelEdit.LabelEdit AOPC;
-        private ReaLTaiizor.Controls.LabelEdit.LabelEdit AOPL;
-        private ReaLTaiizor.Controls.LabelEdit.LabelEdit KOPC;
-        private ReaLTaiizor.Controls.LabelEdit.LabelEdit KOPL;
-        private ReaLTaiizor.Controls.Separator.AirSeparator airSeparator1;
+        private ReaLTaiizor.Controls.ForeverCheckBox SFAST;
+        private ReaLTaiizor.Controls.LabelEdit RESULT;
+        private ReaLTaiizor.Controls.LabelEdit AOPC;
+        private ReaLTaiizor.Controls.LabelEdit AOPL;
+        private ReaLTaiizor.Controls.LabelEdit KOPC;
+        private ReaLTaiizor.Controls.LabelEdit KOPL;
+        private ReaLTaiizor.Controls.AirSeparator airSeparator1;
         public System.Windows.Forms.ListBox RCL;
         public System.Windows.Forms.ListBox ROL;
     }
