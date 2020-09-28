@@ -219,7 +219,7 @@
             // 
             SCAN.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             SCAN.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(223)))), ((int)(((byte)(230)))));
-            SCAN.ButtonType = ReaLTaiizor.Utils.HopeButtonType.Primary;
+            SCAN.ButtonType = ReaLTaiizor.Util.HopeButtonType.Primary;
             SCAN.Cursor = System.Windows.Forms.Cursors.Hand;
             SCAN.DangerColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(108)))), ((int)(((byte)(108)))));
             SCAN.DefaultColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
@@ -346,7 +346,7 @@
             // 
             airSeparator1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             airSeparator1.BackColor = System.Drawing.Color.Yellow;
-            airSeparator1.Colors = new ReaLTaiizor.Utils.BloomAir[0];
+            airSeparator1.Colors = new ReaLTaiizor.Util.BloomAir[0];
             airSeparator1.Customization = "";
             airSeparator1.Font = new System.Drawing.Font("Verdana", 8F);
             airSeparator1.Image = null;

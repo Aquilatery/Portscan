@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Drawing;
-using ReaLTaiizor.Utils;
+using ReaLTaiizor.Util;
 using System.Net.Sockets;
 using ReaLTaiizor.Controls;
 using System.Windows.Forms;
