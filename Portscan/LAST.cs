@@ -1,17 +1,17 @@
 ﻿using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Net.Sockets;
-using System.Windows.Forms;
-using System.ComponentModel;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Portscan
 {
     public partial class LAST : Form
     {
-        bool Start = true;
-        int EIS = 0;
-        double Time = 0;
+        private bool Start = true;
+        private int EIS = 0;
+        private double Time = 0;
 
         public LAST()
         {
@@ -37,13 +37,17 @@ namespace Portscan
         private void TCP_CheckedChanged(object sender, EventArgs e)
         {
             if (Start)
+            {
                 UDP.Checked = !TCP.Checked;
+            }
         }
 
         private void UDP_CheckedChanged(object sender, EventArgs e)
         {
             if (Start)
+            {
                 TCP.Checked = !UDP.Checked;
+            }
         }
 
         private void PORT1T_TextChanged(object sender, EventArgs e)
@@ -63,28 +67,50 @@ namespace Portscan
                 if (Start)
                 {
                     if (string.IsNullOrEmpty(DOMAIN.Text) || string.IsNullOrWhiteSpace(DOMAIN.Text))
+                    {
                         MessageBox.Show("IP Address - Domain is Empty!");
+                    }
                     else if (DOMAIN.Text.StartsWith("http"))
+                    {
                         MessageBox.Show("Domain Address Does Not Start With 'http' or 'https'!");
+                    }
                     else if (string.IsNullOrEmpty(PORT1T.Text))
+                    {
                         MessageBox.Show("PORT 1 is Empty!");
+                    }
                     else if (Convert.ToInt32(PORT1T.Text) == 0 || Convert.ToInt32(PORT1T.Text) > 65535)
+                    {
                         MessageBox.Show("PORT 1 Must Be Greater Than 0, Less Than 65535!");
+                    }
                     else if (!string.IsNullOrEmpty(PORT2T.Text) && Convert.ToInt32(PORT1T.Text) == 0 || Convert.ToInt32(PORT1T.Text) > 65535)
+                    {
                         MessageBox.Show("PORT 2 Must Be Greater Than 0 and Less Than 65535!");
+                    }
                     else if (!string.IsNullOrEmpty(PORT2T.Text) && (PORT1T.Text == PORT2T.Text || Convert.ToInt32(PORT1T.Text) == Convert.ToInt32(PORT2T.Text)))
+                    {
                         MessageBox.Show("PORT 1 Cannot Be The Same As PORT 2!");
+                    }
                     else if (!string.IsNullOrEmpty(PORT2T.Text) && Convert.ToInt32(PORT1T.Text) > Convert.ToInt32(PORT2T.Text))
+                    {
                         MessageBox.Show("PORT 1 Must Be Less Than PORT 2!");
+                    }
                     else if (PORT1T.Text.StartsWith("0"))
+                    {
                         MessageBox.Show("PORT 1 Value Cannot Begin With 0!");
+                    }
                     else if (PORT2T.Text.StartsWith("0"))
+                    {
                         MessageBox.Show("PORT 2 Value Cannot Begin With 0!");
+                    }
                     else
+                    {
                         FIX(false);
+                    }
                 }
                 else
+                {
                     FIX(true);
+                }
             }
             catch (Exception Error)
             {
@@ -128,9 +154,15 @@ namespace Portscan
                 else
                 {
                     if (ROL.Items.Count > 1)
+                    {
                         ROL.Items.Clear();
+                    }
+
                     if (RCL.Items.Count > 1)
+                    {
                         RCL.Items.Clear();
+                    }
+
                     SCAN.Text = "STOP";
                     RESULT.Text = "";
                     AOPC.Text = "0";
@@ -138,9 +170,14 @@ namespace Portscan
                     Time = 0;
                     TIMER.Text = "The Passing Time: 0s";
                     if (string.IsNullOrEmpty(PORT2T.Text))
+                    {
                         EIS = 1;
+                    }
                     else
-                        EIS = Int32.Parse(PORT2T.Text) - Int32.Parse(PORT1T.Text);
+                    {
+                        EIS = int.Parse(PORT2T.Text) - int.Parse(PORT1T.Text);
+                    }
+
                     Times.Start();
                     Scanner.RunWorkerAsync();
                 }
@@ -158,9 +195,14 @@ namespace Portscan
             {
                 int R = 0;
                 if (!string.IsNullOrEmpty(PORT2T.Text))
+                {
                     R = EIS - (ROL.Items.Count + RCL.Items.Count) + 1;
+                }
+
                 if (R > 0)
+                {
                     RESULT.Text = "REMAINING: " + R;
+                }
                 else
                 {
                     RESULT.Text = "";
@@ -177,9 +219,13 @@ namespace Portscan
         private ProtocolType GTU()
         {
             if (TCP.Checked)
+            {
                 return ProtocolType.Tcp;
+            }
             else
+            {
                 return ProtocolType.Udp;
+            }
         }
 
         private void SCN1(int P, string IP)
@@ -232,10 +278,15 @@ namespace Portscan
             {
                 int E;
                 if (string.IsNullOrEmpty(PORT2T.Text))
-                    E = Int32.Parse(PORT1T.Text);
+                {
+                    E = int.Parse(PORT1T.Text);
+                }
                 else
-                    E = Int32.Parse(PORT2T.Text);
-                Parallel.For(Int32.Parse(PORT1T.Text), ++E, C =>
+                {
+                    E = int.Parse(PORT2T.Text);
+                }
+
+                Parallel.For(int.Parse(PORT1T.Text), ++E, C =>
                 {
                     if (!Start)
                     {
@@ -243,9 +294,13 @@ namespace Portscan
                         Task TASK = new Task(delegate ()
                         {
                             if (FST.Checked)
+                            {
                                 SCN2(P, DOMAIN.Text);
+                            }
                             else
+                            {
                                 SCN1(P, DOMAIN.Text);
+                            }
                         });
                         TASK.Start();
                     }

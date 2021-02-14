@@ -3,13 +3,13 @@ using System.Windows.Forms;
 
 namespace Portscan
 {
-    static class Portscan
+    internal static class Portscan
     {
         /// <summary>
         /// Uygulamanın ana girdi noktası.
         /// </summary>
         [STAThread]
-        static void Main()
+        private static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

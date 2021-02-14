@@ -1,22 +1,21 @@
-﻿using System;
-using System.Drawing;
+﻿using ReaLTaiizor.Controls;
 using ReaLTaiizor.Util;
-using System.Net.Sockets;
-using ReaLTaiizor.Controls;
-using System.Windows.Forms;
+using System;
 using System.ComponentModel;
+using System.Drawing;
+using System.Net.Sockets;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace Portscan
 {
     public partial class MAIN : Form
     {
-        bool Start = true;
-        int EIS = 0;
-        double Time = 0;
-        int TTL = 0;
-
-        Task TASK = null;
+        private bool Start = true;
+        private int EIS = 0;
+        private double Time = 0;
+        private int TTL = 0;
+        private Task TASK = null;
 
         public MAIN()
         {
@@ -54,41 +53,61 @@ namespace Portscan
         private void TCP_CheckedChanged(object sender, EventArgs e)
         {
             if (Start)
+            {
                 UDP.Checked = !TCP.Checked;
+            }
         }
 
         private void UDP_CheckedChanged(object sender, EventArgs e)
         {
             if (Start)
+            {
                 TCP.Checked = !UDP.Checked;
+            }
         }
 
         private void SFAST_CheckedChanged(object sender)
         {
             if (!Start)
+            {
                 SFAST.Checked = !SFAST.Checked;
+            }
         }
 
         private void PORT1T_TextChanged(object sender, EventArgs e)
         {
             PORT1T.Text = PORT1T.Text.Replace(" ", "");
             if (PORT1T.Text.Length > 0 && Convert.ToInt32(PORT1T.Text) > 65535)
+            {
                 PORT1T.Text = "65535";
+            }
+
             if (PORT1T.Text == "0")
+            {
                 PORT1T.Text = null;
+            }
             else if (PORT1T.Text.StartsWith("0"))
+            {
                 PORT1T.Text = PORT1T.Text.Substring(1, PORT1T.Text.Length - 1);
+            }
         }
 
         private void PORT2T_TextChanged(object sender, EventArgs e)
         {
             PORT2T.Text = PORT2T.Text.Replace(" ", "");
             if (PORT2T.Text.Length > 0 && Convert.ToInt32(PORT2T.Text) > 65535)
+            {
                 PORT2T.Text = "65535";
+            }
+
             if (PORT2T.Text == "0")
+            {
                 PORT2T.Text = null;
+            }
             else if (PORT2T.Text.StartsWith("0"))
+            {
                 PORT2T.Text = PORT2T.Text.Substring(1, PORT2T.Text.Length - 1);
+            }
         }
 
         private void SCAN_Click(object sender, EventArgs e)
@@ -98,20 +117,34 @@ namespace Portscan
                 if (Start)
                 {
                     if (string.IsNullOrEmpty(DOMAIN.Text) || string.IsNullOrWhiteSpace(DOMAIN.Text))
+                    {
                         MessageBox.Show("IP Address - Domain is Empty!");
+                    }
                     else if (DOMAIN.Text.StartsWith("http"))
+                    {
                         MessageBox.Show("Domain Address Does Not Start With 'http://' or 'https://'!");
+                    }
                     else if (string.IsNullOrEmpty(PORT1T.Text))
+                    {
                         MessageBox.Show("PORT 1 is Empty!");
+                    }
                     else if (!string.IsNullOrEmpty(PORT2T.Text) && (PORT1T.Text == PORT2T.Text || Convert.ToInt32(PORT1T.Text) == Convert.ToInt32(PORT2T.Text)))
+                    {
                         MessageBox.Show("PORT 1 Cannot Be The Same As PORT 2!");
+                    }
                     else if (!string.IsNullOrEmpty(PORT2T.Text) && Convert.ToInt32(PORT1T.Text) > Convert.ToInt32(PORT2T.Text))
+                    {
                         MessageBox.Show("PORT 1 Must Be Less Than PORT 2!");
+                    }
                     else
+                    {
                         FIX(false);
+                    }
                 }
                 else
+                {
                     FIX(true);
+                }
             }
             catch (Exception Error)
             {
@@ -126,16 +159,22 @@ namespace Portscan
             {
                 ROL.Refresh();
                 if (ROL.Items.Count > 0)
+                {
                     ROL.Items.Clear();
+                }
 
                 RCL.Refresh();
                 if (RCL.Items.Count > 0)
+                {
                     RCL.Items.Clear();
+                }
             }
             catch (Exception EX)
             {
                 if (EXV)
+                {
                     MessageBox.Show(EX.Message + "\n\n" + EX.StackTrace + "\n\n" + EX.Data);
+                }
             }
         }
 
@@ -186,9 +225,14 @@ namespace Portscan
                     Time = 0;
                     PTIME.Text = "The Passing Time: 0s";
                     if (string.IsNullOrEmpty(PORT2T.Text))
+                    {
                         EIS = 1;
+                    }
                     else
-                        EIS = Int32.Parse(PORT2T.Text) - Int32.Parse(PORT1T.Text) + 1;
+                    {
+                        EIS = int.Parse(PORT2T.Text) - int.Parse(PORT1T.Text) + 1;
+                    }
+
                     Times.Start();
                     Scanner.RunWorkerAsync();
                 }
@@ -206,9 +250,14 @@ namespace Portscan
             {
                 int R = 0;
                 if (!string.IsNullOrEmpty(PORT2T.Text))
+                {
                     R = EIS - (ROL.Items.Count + RCL.Items.Count); //TTL
+                }
+
                 if (R > 0)
+                {
                     RESULT.Text = "REMAINING: " + R;
+                }
                 else
                 {
                     RESULT.Text = "";
@@ -225,9 +274,13 @@ namespace Portscan
         private ProtocolType GTU()
         {
             if (TCP.Checked)
+            {
                 return ProtocolType.Tcp;
+            }
             else
+            {
                 return ProtocolType.Udp;
+            }
         }
 
         private void SCN_S(int P, string IP)
@@ -283,16 +336,20 @@ namespace Portscan
                 if (string.IsNullOrEmpty(PORT2T.Text))
                 {
                     if (SFAST.Checked)
+                    {
                         SCN_F(Convert.ToInt32(PORT1T.Text), DOMAIN.Text);
+                    }
                     else
+                    {
                         SCN_S(Convert.ToInt32(PORT1T.Text), DOMAIN.Text);
+                    }
                 }
                 else
                 {
-                    int E = Int32.Parse(PORT2T.Text);
+                    int E = int.Parse(PORT2T.Text);
                     if (SFAST.Checked)
                     {
-                        Parallel.For(Int32.Parse(PORT1T.Text), ++E, C =>
+                        Parallel.For(int.Parse(PORT1T.Text), ++E, C =>
                         {
                             int P = C;
                             TASK = new Task(delegate ()
@@ -304,7 +361,7 @@ namespace Portscan
                     }
                     else
                     {
-                        Parallel.For(Int32.Parse(PORT1T.Text), ++E, C =>
+                        Parallel.For(int.Parse(PORT1T.Text), ++E, C =>
                         {
                             int P = C;
                             TASK = new Task(delegate ()
