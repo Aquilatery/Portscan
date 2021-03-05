@@ -22,7 +22,7 @@ namespace Portscan
         {
             try
             {
-                Socket UDPC = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Udp);
+                Socket UDPC = new(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Udp);
                 UDPC.Dispose();
             }
             catch
@@ -232,7 +232,7 @@ namespace Portscan
         {
             if (!Start)
             {
-                Socket Socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, GTU());
+                Socket Socket = new(AddressFamily.InterNetwork, SocketType.Stream, GTU());
                 try
                 {
                     Socket.Connect(IP, P);
@@ -254,7 +254,7 @@ namespace Portscan
         {
             if (!Start)
             {
-                Socket Socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, GTU());
+                Socket Socket = new(AddressFamily.InterNetwork, SocketType.Stream, GTU());
                 try
                 {
                     await Socket.ConnectAsync(IP, P);
@@ -291,7 +291,7 @@ namespace Portscan
                     if (!Start)
                     {
                         int P = C;
-                        Task TASK = new Task(delegate ()
+                        Task TASK = new(delegate ()
                         {
                             if (FST.Checked)
                             {

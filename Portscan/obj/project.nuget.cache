@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "dgSpecHash": "LWLTR0y7eSv9MG537Bspu4Itnl4V1+EyrkwjCXu7hVNeIm9d9jKykkjcrPJpRxyfotNZW+aCOoVs8CIWAvDtng==",
+  "success": true,
+  "projectFilePath": "G:\\MyProject\\Portscan\\App\\Portscan\\Portscan\\Portscan.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Taiizor\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\Taiizor\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\Taiizor\\.nuget\\packages\\microsoft.visualbasic\\10.4.0-preview.18571.3\\microsoft.visualbasic.10.4.0-preview.18571.3.nupkg.sha512",
+    "C:\\Users\\Taiizor\\.nuget\\packages\\microsoft.win32.systemevents\\5.0.0\\microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+    "C:\\Users\\Taiizor\\.nuget\\packages\\realtaiizor\\3.7.8.2\\realtaiizor.3.7.8.2.nupkg.sha512",
+    "C:\\Users\\Taiizor\\.nuget\\packages\\system.configuration.configurationmanager\\5.0.0\\system.configuration.configurationmanager.5.0.0.nupkg.sha512",
+    "C:\\Users\\Taiizor\\.nuget\\packages\\system.drawing.common\\5.0.1\\system.drawing.common.5.0.1.nupkg.sha512",
+    "C:\\Users\\Taiizor\\.nuget\\packages\\system.resources.extensions\\5.0.0\\system.resources.extensions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Taiizor\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\Taiizor\\.nuget\\packages\\system.security.cryptography.protecteddata\\5.0.0\\system.security.cryptography.protecteddata.5.0.0.nupkg.sha512",
+    "C:\\Users\\Taiizor\\.nuget\\packages\\system.security.permissions\\5.0.0\\system.security.permissions.5.0.0.nupkg.sha512",
+    "C:\\Users\\Taiizor\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\Taiizor\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

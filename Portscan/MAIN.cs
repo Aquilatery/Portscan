@@ -26,7 +26,7 @@ namespace Portscan
         {
             try
             {
-                Socket UDPC = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Udp);
+                Socket UDPC = new(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Udp);
                 UDPC.Dispose();
             }
             catch
@@ -34,7 +34,7 @@ namespace Portscan
                 UDP.Visible = false;
                 TCP.Visible = false;
                 DOMAIN.Size = new Size(250, 29);
-                ForeverStatusBar INFO = new ForeverStatusBar
+                ForeverStatusBar INFO = new()
                 {
                     Text = "TCP/UDP Information : Selection Disabled Because UDP Is Not Supported!",
                     TextColor = Color.FromArgb(136, 140, 155),
