@@ -1,6 +1,70 @@
 {
   "version": 3,
   "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Microsoft.CSharp/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "Microsoft.VisualBasic/10.4.0-preview.18571.3": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "ReaLTaiizor/3.7.8.5": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/ReaLTaiizor.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/ReaLTaiizor.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      }
+    },
+    ".NETCoreApp,Version=v3.1/win7-x86": {
+      "Microsoft.CSharp/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "Microsoft.VisualBasic/10.4.0-preview.18571.3": {
+        "type": "package",
+        "compile": {
+          "ref/netcoreapp2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/_._": {}
+        }
+      },
+      "ReaLTaiizor/3.7.8.5": {
+        "type": "package",
+        "compile": {
+          "lib/netcoreapp3.1/ReaLTaiizor.dll": {}
+        },
+        "runtime": {
+          "lib/netcoreapp3.1/ReaLTaiizor.dll": {}
+        },
+        "frameworkReferences": [
+          "Microsoft.WindowsDesktop.App.WindowsForms"
+        ]
+      }
+    },
     ".NETFramework,Version=v4.8": {
       "Microsoft.CSharp/4.7.0": {
         "type": "package",
@@ -26,13 +90,12 @@
           "lib/net45/_._": {}
         }
       },
-      "ReaLTaiizor/3.7.8.3": {
+      "ReaLTaiizor/3.7.8.5": {
         "type": "package",
         "frameworkAssemblies": [
           "Microsoft.CSharp",
           "Microsoft.VisualBasic",
-          "System.Design",
-          "System.Windows.Forms"
+          "System.Design"
         ],
         "compile": {
           "lib/net48/ReaLTaiizor.dll": {}
@@ -67,13 +130,12 @@
           "lib/net45/_._": {}
         }
       },
-      "ReaLTaiizor/3.7.8.3": {
+      "ReaLTaiizor/3.7.8.5": {
         "type": "package",
         "frameworkAssemblies": [
           "Microsoft.CSharp",
           "Microsoft.VisualBasic",
-          "System.Design",
-          "System.Windows.Forms"
+          "System.Design"
         ],
         "compile": {
           "lib/net48/ReaLTaiizor.dll": {}
@@ -102,7 +164,7 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
-      "ReaLTaiizor/3.7.8.3": {
+      "ReaLTaiizor/3.7.8.5": {
         "type": "package",
         "compile": {
           "lib/net5.0-windows7.0/ReaLTaiizor.dll": {}
@@ -134,7 +196,7 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
-      "ReaLTaiizor/3.7.8.3": {
+      "ReaLTaiizor/3.7.8.5": {
         "type": "package",
         "compile": {
           "lib/net5.0-windows7.0/ReaLTaiizor.dll": {}
@@ -166,7 +228,7 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
-      "ReaLTaiizor/3.7.8.3": {
+      "ReaLTaiizor/3.7.8.5": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/ReaLTaiizor.dll": {}
@@ -198,7 +260,7 @@
           "lib/netcoreapp2.0/_._": {}
         }
       },
-      "ReaLTaiizor/3.7.8.3": {
+      "ReaLTaiizor/3.7.8.5": {
         "type": "package",
         "compile": {
           "lib/net6.0-windows7.0/ReaLTaiizor.dll": {}
@@ -336,10 +398,10 @@
         "version.txt"
       ]
     },
-    "ReaLTaiizor/3.7.8.3": {
-      "sha512": "e7W4bfG8dp0n5pClVKOomtoNwQs9xq+pXQwboSBXATPC2KdNTutkskhCCSfSGew2Vq0MGaLagQlp3gYzZPkIRg==",
+    "ReaLTaiizor/3.7.8.5": {
+      "sha512": "Ii7HHUZifkTgerZ9mbksg2FVCtiG3PgKNZzMy9skdcrzavLfYVbNxBFTodNfnDl+KII9QZ2fxpBmy7quFT44VA==",
       "type": "package",
-      "path": "realtaiizor/3.7.8.3",
+      "path": "realtaiizor/3.7.8.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -371,32 +433,40 @@
         "lib/net5.0-windows7.0/ReaLTaiizor.xml",
         "lib/net6.0-windows7.0/ReaLTaiizor.dll",
         "lib/net6.0-windows7.0/ReaLTaiizor.xml",
-        "realtaiizor.3.7.8.3.nupkg.sha512",
+        "lib/netcoreapp3.0/ReaLTaiizor.dll",
+        "lib/netcoreapp3.0/ReaLTaiizor.xml",
+        "lib/netcoreapp3.1/ReaLTaiizor.dll",
+        "lib/netcoreapp3.1/ReaLTaiizor.xml",
+        "realtaiizor.3.7.8.5.nupkg.sha512",
         "realtaiizor.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "Microsoft.CSharp >= 4.7.0",
+      "Microsoft.VisualBasic >= 10.4.0-preview.18571.3",
+      "ReaLTaiizor >= 3.7.8.5"
+    ],
     ".NETFramework,Version=v4.8": [
       "Microsoft.CSharp >= 4.7.0",
       "Microsoft.VisualBasic >= 10.4.0-preview.18571.3",
-      "ReaLTaiizor >= 3.7.8.3"
+      "ReaLTaiizor >= 3.7.8.5"
     ],
     "net5.0-windows7.0": [
       "Microsoft.CSharp >= 4.7.0",
       "Microsoft.VisualBasic >= 10.4.0-preview.18571.3",
-      "ReaLTaiizor >= 3.7.8.3"
+      "ReaLTaiizor >= 3.7.8.5"
     ],
     "net6.0-windows7.0": [
       "Microsoft.CSharp >= 4.7.0",
       "Microsoft.VisualBasic >= 10.4.0-preview.18571.3",
-      "ReaLTaiizor >= 3.7.8.3"
+      "ReaLTaiizor >= 3.7.8.5"
     ]
   },
   "packageFolders": {
     "C:\\Users\\Taiizor\\.nuget\\packages\\": {},
-    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
-    "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\": {}
+    "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
@@ -409,26 +479,33 @@
       "projectStyle": "PackageReference",
       "crossTargeting": true,
       "fallbackFolders": [
-        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-        "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
+        "D:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
         "C:\\Users\\Taiizor\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net48",
         "net5.0-windows",
-        "net6.0-windows"
+        "net6.0-windows",
+        "netcoreapp3.1-windows"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {},
-        "https://www.myget.org/F/caliburn-micro-builds/api/v3/index.json": {}
+        "https://myget.org/F/caliburn-micro-builds/api/v3/index.json": {},
+        "https://pkgs.dev.azure.com/azure-public/vside/_packaging/xamarin-impl/nuget/v3/index.json": {},
+        "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-public/nuget/v3/index.json": {},
+        "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet6/nuget/v3/index.json": {}
       },
       "frameworks": {
+        "netcoreapp3.1": {
+          "targetAlias": "netcoreapp3.1-windows",
+          "projectReferences": {}
+        },
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {}
@@ -449,6 +526,42 @@
       }
     },
     "frameworks": {
+      "netcoreapp3.1": {
+        "targetAlias": "netcoreapp3.1-windows",
+        "dependencies": {
+          "Microsoft.CSharp": {
+            "target": "Package",
+            "version": "[4.7.0, )"
+          },
+          "Microsoft.VisualBasic": {
+            "target": "Package",
+            "version": "[10.4.0-preview.18571.3, )"
+          },
+          "ReaLTaiizor": {
+            "target": "Package",
+            "version": "[3.7.8.5, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          },
+          "Microsoft.WindowsDesktop.App.WindowsForms": {
+            "privateAssets": "none"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+      },
       "net5.0-windows7.0": {
         "targetAlias": "net5.0-windows",
         "dependencies": {
@@ -462,7 +575,7 @@
           },
           "ReaLTaiizor": {
             "target": "Package",
-            "version": "[3.7.8.3, )"
+            "version": "[3.7.8.5, )"
           }
         },
         "imports": [
@@ -475,12 +588,6 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.NETCore.App.Host.win-x64",
-            "version": "[5.0.3, 5.0.3]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
@@ -489,7 +596,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.2.21155.3\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       },
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
@@ -504,7 +611,7 @@
           },
           "ReaLTaiizor": {
             "target": "Package",
-            "version": "[3.7.8.3, )"
+            "version": "[3.7.8.5, )"
           }
         },
         "imports": [
@@ -525,7 +632,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.2.21155.3\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       },
       "net48": {
         "targetAlias": "net48",
@@ -540,10 +647,10 @@
           },
           "ReaLTaiizor": {
             "target": "Package",
-            "version": "[3.7.8.3, )"
+            "version": "[3.7.8.5, )"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100-preview.2.21155.3\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
       }
     },
     "runtimes": {

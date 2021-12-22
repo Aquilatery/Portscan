@@ -7,7 +7,6 @@ G:\MyProject\Portscan\App\Portscan\Portscan\bin\Release\net5.0-windows\Portscan.
 G:\MyProject\Portscan\App\Portscan\Portscan\bin\Release\net5.0-windows\ref\Portscan.dll
 G:\MyProject\Portscan\App\Portscan\Portscan\bin\Release\net5.0-windows\Portscan.pdb
 G:\MyProject\Portscan\App\Portscan\Portscan\bin\Release\net5.0-windows\ReaLTaiizor.dll
-G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\net5.0-windows\Portscan.csprojAssemblyReference.cache
 G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\net5.0-windows\Portscan.g.resources
 G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\net5.0-windows\Portscan.LAST.resources
 G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\net5.0-windows\Portscan.MAIN.resources
@@ -20,3 +19,4 @@ G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\net5.0-windows\Portscan.
 G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\net5.0-windows\ref\Portscan.dll
 G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\net5.0-windows\Portscan.pdb
 G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\net5.0-windows\Portscan.genruntimeconfig.cache
+G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\net5.0-windows\Portscan.csproj.AssemblyReference.cache

@@ -2,7 +2,6 @@ G:\MyProject\Portscan\App\Portscan\Portscan\bin\Release\net48\Portscan.exe.confi
 G:\MyProject\Portscan\App\Portscan\Portscan\bin\Release\net48\Portscan.exe
 G:\MyProject\Portscan\App\Portscan\Portscan\bin\Release\net48\Portscan.pdb
 G:\MyProject\Portscan\App\Portscan\Portscan\bin\Release\net48\ReaLTaiizor.dll
-G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\net48\Portscan.csprojAssemblyReference.cache
 G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\net48\Portscan.g.resources
 G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\net48\Portscan.LAST.resources
 G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\net48\Portscan.MAIN.resources
@@ -13,3 +12,5 @@ G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\net48\Portscan.csproj.Co
 G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\net48\Portscan.csproj.CopyComplete
 G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\net48\Portscan.exe
 G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\net48\Portscan.pdb
+G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\net48\Portscan.csproj.AssemblyReference.cache
+G:\MyProject\Portscan\App\Portscan\Portscan\obj\Release\net48\Portscan.csproj.SuggestedBindingRedirects.cache
