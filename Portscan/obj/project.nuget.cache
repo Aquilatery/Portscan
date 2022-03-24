@@ -1,12 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "JdmktmvE2ws45PWSS/zaUsJKpV7At+NT7ke0kcFaak7/GvuO/3BHp79j8GXsS58LPA+X5VtrkG12E++ZX/akMA==",
+  "dgSpecHash": "20MbbCtuY97HUgJPvBYJwQHmIx7U0z0ItoL22z7eXl2hqbk42ABU65RhJUllwDggaHtnRNVSF+V7QRfNAh/QyA==",
   "success": true,
   "projectFilePath": "G:\\MyProject\\Portscan\\App\\Portscan\\Portscan\\Portscan.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Taiizor\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Taiizor\\.nuget\\packages\\microsoft.visualbasic\\10.4.0-preview.18571.3\\microsoft.visualbasic.10.4.0-preview.18571.3.nupkg.sha512",
-    "C:\\Users\\Taiizor\\.nuget\\packages\\realtaiizor\\3.7.8.5\\realtaiizor.3.7.8.5.nupkg.sha512"
+    "C:\\Users\\Taiizor\\.nuget\\packages\\realtaiizor\\3.7.8.5\\realtaiizor.3.7.8.5.nupkg.sha512",
+    "C:\\Users\\Taiizor\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512",
+    "C:\\Users\\Taiizor\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\5.0.14\\microsoft.netcore.app.host.win-x64.5.0.14.nupkg.sha512",
+    "C:\\Users\\Taiizor\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\6.0.2\\microsoft.netcore.app.host.win-x64.6.0.2.nupkg.sha512",
+    "C:\\Users\\Taiizor\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\6.0.0\\microsoft.aspnetcore.app.ref.6.0.0.nupkg.sha512",
+    "C:\\Users\\Taiizor\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.0\\microsoft.windowsdesktop.app.ref.6.0.0.nupkg.sha512",
+    "C:\\Users\\Taiizor\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.0\\microsoft.netcore.app.ref.6.0.0.nupkg.sha512"
   ],
   "logs": []
 }
