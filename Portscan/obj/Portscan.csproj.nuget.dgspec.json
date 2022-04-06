@@ -33,6 +33,7 @@
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {},
           "https://myget.org/F/caliburn-micro-builds/api/v3/index.json": {},
+          "https://nuget.pkg.github.com/Taiizor/index.json": {},
           "https://pkgs.dev.azure.com/azure-public/vside/_packaging/xamarin-impl/nuget/v3/index.json": {},
           "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet-public/nuget/v3/index.json": {},
           "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet6/nuget/v3/index.json": {}
@@ -79,7 +80,7 @@
             },
             "ReaLTaiizor": {
               "target": "Package",
-              "version": "[3.7.8.5, )"
+              "version": "[3.7.8.6, )"
             }
           },
           "imports": [
@@ -121,7 +122,7 @@
             },
             "ReaLTaiizor": {
               "target": "Package",
-              "version": "[3.7.8.5, )"
+              "version": "[3.7.8.6, )"
             }
           },
           "imports": [
@@ -163,7 +164,7 @@
             },
             "ReaLTaiizor": {
               "target": "Package",
-              "version": "[3.7.8.5, )"
+              "version": "[3.7.8.6, )"
             }
           },
           "imports": [
@@ -217,7 +218,7 @@
             },
             "ReaLTaiizor": {
               "target": "Package",
-              "version": "[3.7.8.5, )"
+              "version": "[3.7.8.6, )"
             }
           },
           "imports": [
@@ -253,7 +254,7 @@
             },
             "ReaLTaiizor": {
               "target": "Package",
-              "version": "[3.7.8.5, )"
+              "version": "[3.7.8.6, )"
             }
           },
           "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.100-preview.2.22153.17\\RuntimeIdentifierGraph.json"
