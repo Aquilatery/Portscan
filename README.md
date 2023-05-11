@@ -1,9 +1,9 @@
-# Portscan
-  <p>Portscan v1.6</p>
-  <p>Visual Studio 2022</p>
-  <p>.NET Framework 4.8 (Minimum 4.0) & .NET Core 3.1 & .NET 5 & .NET 6 & .NET 7</p>
-  <img src="https://raw.githubusercontent.com/Taiizor/Portscan/master/.screenshots/UI_1.png" />
-  <img src="https://raw.githubusercontent.com/Taiizor/Portscan/master/.screenshots/UI_2.png" />
-  <img src="https://raw.githubusercontent.com/Taiizor/Portscan/master/.screenshots/UI_3.png" />
-  <img src="https://raw.githubusercontent.com/Taiizor/Portscan/master/.screenshots/UI_4.png" />
-  <img src="https://raw.githubusercontent.com/Taiizor/Portscan/master/.screenshots/UI_5.png" />
+# *Portscan moved to the ReaLTaiizor repo*
+
+The [sources](https://github.com/Taiizor/ReaLTaiizor/tree/develop/ready/ReaLTaiizor.Portscan) and [issues](https://github.com/Taiizor/ReaLTaiizor/issues?q=is%3Aopen+is%3Aissue) for Portscan have moved to the [ReaLTaiizor repo](https://github.com/Taiizor/ReaLTaiizor).
+
+New issues and PRs should be posted at the [ReaLTaiizor repo](https://github.com/Taiizor/ReaLTaiizor).
+
+Please don't post new issues or PRs in this repo.
+
+For information about using ReaLTaiizor, see [ReaLTaiizor wiki](https://github.com/Taiizor/ReaLTaiizor/wiki).
